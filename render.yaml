@@ -1,0 +1,16 @@
+services:
+  - type: web
+    name: litellm-proxy
+    runtime: docker
+    plan: starter
+    envVars:
+      - key: PORT
+        value: 4000
+      - key: LITELLM_MASTER_KEY
+        sync: false          # prompts in the Render UI — the single key the app sends
+      - key: ANTHROPIC_API_KEY
+        sync: false
+      - key: OPENAI_API_KEY
+        sync: false
+      - key: GEMINI_API_KEY
+        sync: false
