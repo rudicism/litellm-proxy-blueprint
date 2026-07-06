@@ -2,7 +2,7 @@ services:
   - type: web
     name: litellm-proxy
     runtime: docker
-    plan: starter
+    plan: free            # free tier for testing; bump to "starter" for a real client (no idle spin-down)
     envVars:
       - key: PORT
         value: 4000
